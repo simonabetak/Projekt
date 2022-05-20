@@ -1,0 +1,60 @@
+@use 'colors';
+
+.contact {
+    // display: grid;
+    // grid-template-columns: 40px 200px;
+    // column-gap: 15px;
+    // row-gap: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 20px;
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+    &__icon {
+        // grid-column: 1 / 2;
+        flex-basis: 10%;
+        // justify-self: end;
+        // align-self: center;
+        max-width: 32px;
+        
+    }
+    &__details {
+        // grid-column: 2 / -1;
+        flex-basis: 90%;
+        // justify-self: start;
+        // align-self: center;
+        color: colors.$c-darkgrey;
+        font-size: 14px;
+        text-align: left;
+       
+    }
+    &__title {
+        color: colors.$c-darkgrey;
+        width: 300px;
+        text-align: center;
+        margin: 20px auto;
+    }
+}
+
+.a--nolink {
+    text-decoration: none;
+    color: colors.$c-darkgrey;
+}
+
+@media screen and (min-width: 960px) {
+    .contact {
+        margin-top: 20px;
+
+        &__title {
+            width: 500px;
+        }
+        
+    }
+}

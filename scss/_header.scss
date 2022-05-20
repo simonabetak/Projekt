@@ -1,0 +1,100 @@
+@use 'colors';
+
+.header {
+    width: 100%;
+    background-color: colors.$c-primary;
+    border-bottom: 4px solid colors.$c-primary-dark;
+    padding: 20px;
+
+    &__wrapper {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo {
+    max-width: 200px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.menu {
+    &__checkbox {
+        position: absolute;
+        left: -9999px;
+    }
+    &__toggler {
+        font-size: 30px;
+    }
+    &__list {
+        list-style: none;
+        display: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        box-shadow: 0px 2px 10px colors.$c-lightgrey;
+    }
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: colors.$c-darkgrey;
+        padding: 15px 20px;
+        
+    }
+    &__item {
+        background-color: colors.$c-light;
+        border-bottom: 1px solid colors.$c-primary-dark;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .menu__checkbox:checked ~ .menu__list {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 660px) { 
+    .menu {
+        &__list {
+            display: block;
+            position: inherit;
+            box-shadow: none;
+        }
+        &__link {
+            display: inline;
+            font-size: 18px;
+            border-radius: 20px;
+            
+        }
+        &__item {
+            display: inline;
+            background-color: colors.$c-primary;
+            border: none;
+        }
+        &__item--active .menu__link{
+            background-color: colors.$c-darkgrey;
+            color: colors.$c-primary;
+        }
+        &__toggler {
+            display: none;
+        }
+        &__link:hover,
+        &__link:focus {
+            background-color: colors.$c-darkgrey;
+            color: colors.$c-primary;
+        }
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .logo {
+        max-width: 300px;
+    }
+}

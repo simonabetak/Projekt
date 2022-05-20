@@ -1,0 +1,66 @@
+@use 'colors';
+
+.contact-form {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    display: inline-block;
+    margin: 20px auto;
+
+
+    &__field {
+        max-width: 100%;
+        margin-bottom: 15px;
+        text-align: start;
+    }
+    &__field label {
+        display: block;
+        font-size: 14px;
+    }
+    &__field input,
+    &__field textarea {
+        width: 100%;
+        border-radius: 3px;
+        font-size: 16px;
+        padding: 5px;
+        border: 1px solid colors.$c-darkgrey;
+    }
+    &__field input:focus,
+    &__field textarea:focus,
+    &__button:focus {
+        outline: 0;
+        border: 2px solid colors.$c-darkgrey;
+    }
+    &__checkbox {
+        margin-bottom: 15px;
+        text-align: start;
+        font-size: 12px;
+    }
+    &__button {
+        padding: 5px;
+        margin-top: 10px;
+        border: 1px solid colors.$c-darkgrey;
+        border-radius: 5px;
+    }
+    &__button:hover {
+        background-color: colors.$c-lightgrey;
+    }
+    input[type="checkbox"]:focus {
+        outline-color: colors.$c-darkgrey;
+    }
+}
+
+.required {
+    color: colors.$c-primary-dark;
+}
+
+@media screen and (min-width: 640px) {
+    .form {
+        width: 400px;
+    }
+}
+@media screen and (min-width: 1040px) {
+    .form {
+        width: 500px;
+    }
+}

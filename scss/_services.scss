@@ -1,0 +1,37 @@
+@use 'colors';
+
+.services {
+    &__container {
+        width: 300px;
+        margin: 30px auto;
+        box-shadow: 0px 2px 10px colors.$c-lightgrey;
+        border-radius: 5px;
+    }
+    &__title {
+        background-color: colors.$c-primary;
+        padding: 10px;
+        border-radius: 5px;
+    }
+           
+    &__text {
+        padding: 15px;
+    }
+    &__pricetag {
+        padding: 10px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+
+    &__container {
+        flex-basis: 300px;
+        flex-shrink: 0;
+    }
+    }
+}

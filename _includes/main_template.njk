@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <!-- Header -->
+	<header class="header">
+        <div class="header__wrapper">
+            <a href="http://localhost:8080/"><img class="logo" src="/images/logo.svg" alt="logo Make-up od Petronely"></a>
+
+            <nav class="menu">
+                <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+                <label for="menu-checkbox" class="menu__toggler">☰</label>
+                <ul class="menu__list">
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'omne' }}"><a href="/omne/" class="menu__link">O mne</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'portfolio' }}"><a href="/portfolio/" class="menu__link">Portfolio</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'sluzby' }}"><a href="/sluzby/" class="menu__link">Služby</a></li>
+                    <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'kontakt' }}"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+        </div>
+	</header>
+
+    <!-- Main section -->
+    <main class="main">
+        {{ content | safe }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2022 Simona Betáková 
+    </footer>
+</body>
+</html>

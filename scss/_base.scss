@@ -1,0 +1,27 @@
+@use 'colors';
+
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    background-color: colors.$c-body;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.title--underline::after {
+    content:"";
+    display: block;
+    height: 3px;
+    width: 80px;
+    background-color: colors.$c-primary-dark;
+    position: relative;
+    margin: 10px auto 0 auto;
+} 
+h1, h2, h3, body, p {
+    margin: 0;
+}
