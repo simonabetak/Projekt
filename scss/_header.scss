@@ -5,6 +5,10 @@
     background-color: colors.$c-primary;
     border-bottom: 4px solid colors.$c-primary-dark;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
     &__wrapper {
         max-width: 1200px;
