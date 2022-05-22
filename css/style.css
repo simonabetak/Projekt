@@ -80,7 +80,7 @@ p, span {
   padding: 0;
   margin: 0;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 80px;
   box-shadow: 0px 2px 10px #dbd9db;
 }
@@ -95,7 +95,7 @@ p, span {
   border-bottom: 1px solid #ffae9d;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 659px) {
   .menu__checkbox:checked ~ .menu__list {
     display: block;
   }
@@ -154,6 +154,21 @@ p, span {
   flex-grow: 1;
 }
 
+.title__main {
+  color: #ffae9d;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.cover__wrapper {
+  width: 90%;
+  margin: 100px auto;
+}
+.cover__photo {
+  width: 100%;
+  padding: 10px;
+}
+
 .services__container {
   width: 300px;
   margin: 30px auto;
@@ -183,9 +198,10 @@ p, span {
   align-self: flex-end;
   border-radius: 5px;
 }
-.services__brand {
-  padding: 5px;
-  font-size: 18px;
+
+.brands__container {
+  display: grid;
+  margin: 30px auto;
 }
 
 @media screen and (min-width: 640px) {
@@ -208,6 +224,19 @@ p, span {
     flex-grow: 1;
     align-self: center;
   }
+
+  .brands__container {
+    width: 60%;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .brands__item--left {
+    justify-self: flex-end;
+  }
+  .brands__item--right {
+    justify-self: flex-start;
+  }
 }
 @media screen and (min-width: 1040px) {
   .services {
@@ -218,6 +247,11 @@ p, span {
   }
   .services__container--margin {
     margin: 30px 0;
+  }
+
+  .brands__container {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 .contact-form {
@@ -324,6 +358,10 @@ p, span {
   box-shadow: 0px 2px 10px #dbd9db;
   border-radius: 5px;
 }
+.about__section p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .text--highlight {
   font-size: 20px;
@@ -332,11 +370,11 @@ p, span {
 }
 
 .certificate {
-  width: 300px;
+  width: 290px;
   max-width: 100%;
-  box-shadow: 0px 2px 10px #dbd9db;
+  box-shadow: 0px 2px 10px #303339;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 10px 10px 0px 0px;
 }
 
 .about__references {
@@ -347,5 +385,32 @@ p, span {
 @media screen and (min-width: 960px) {
   .about__section {
     padding: 30px 40px;
+  }
+}
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+.gallery__item {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 2px 2px 10px #dbd9db;
+}
+
+@media screen and (min-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .gallery__item {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }/*# sourceMappingURL=style.css.map */

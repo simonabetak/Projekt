@@ -32,9 +32,16 @@
         align-self: flex-end;
         border-radius: 5px;
     }
-    &__brand {
-        padding: 5px;
-        font-size: 18px;
+    // &__brand {
+    //     padding: 5px;
+    //     font-size: 18px;
+    // }
+}
+
+.brands {
+    &__container {
+        display: grid;
+        margin: 30px auto;
     }
 }
 
@@ -61,6 +68,19 @@
             align-self: center;
         }
     }
+    .brands {
+        &__container {
+            width: 60%;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+        &__item--left {
+            justify-self: flex-end;
+        }
+        &__item--right {
+            justify-self: flex-start;
+        }
+    }
 }
 
 @media screen and (min-width: 1040px) {
@@ -73,6 +93,11 @@
             &--margin {
                 margin: 30px 0;
             }
+        }
+    }
+    .brands {
+        &__container {
+            column-gap: 30px;
         }
     }
 }

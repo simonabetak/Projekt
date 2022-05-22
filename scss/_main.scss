@@ -6,3 +6,20 @@
     text-align: center;
     flex-grow: 1;
 }
+
+.title__main {
+    color: colors.$c-primary-dark;
+    // font-size: 50px;
+    margin: 10px auto;
+    padding: 20px;
+}
+.cover {
+    &__wrapper {
+        width: 90%;
+        margin: 100px auto;
+    }
+    &__photo {
+        width: 100%;
+        padding: 10px;
+    }
+}
