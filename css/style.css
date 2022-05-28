@@ -409,6 +409,9 @@ p, span {
   width: 100%;
   display: block;
   transition: transform 0.55s;
+  aspect-ratio: 269/336;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .photo__description {
   background-color: rgba(48, 51, 57, 0.3764705882);

@@ -24,6 +24,8 @@
         width: 100%;
         display: block;
         transition: transform 0.55s;
+        aspect-ratio: 269 / 336;
+        object-fit: cover;
     }
     &__description {
         background-color: colors.$c-darkgrey-transparent;
