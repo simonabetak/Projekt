@@ -27,6 +27,12 @@
 .about__references {
     font-style: italic;
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    &--right {
+        align-self: flex-end;
+        padding-right: 50px;
+    }
 }
 @media screen and (min-width: 960px) {
     .about__section {

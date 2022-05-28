@@ -4,7 +4,6 @@
     &__gallery {
         display: grid;
         grid-template-columns: repeat(1, 300px);
-        // grid-auto-rows: 300px;
         gap: 10px;
         max-width: 90%;
         margin: 20px auto;
