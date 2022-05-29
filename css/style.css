@@ -439,7 +439,7 @@ p, span {
   margin: 20px auto;
 }
 .photo__wrapper {
-  max-width: 300px;
+  max-width: 270px;
   position: relative;
   overflow: hidden;
 }
@@ -475,6 +475,9 @@ p, span {
   }
   .photo__image {
     max-width: 500px;
+  }
+  .photo__wrapper {
+    max-width: 300px;
   }
 }
 @media screen and (min-width: 960px) {
