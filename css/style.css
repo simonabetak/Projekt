@@ -40,13 +40,6 @@ p, span {
   margin-top: 60px;
 }
 
-.title__home {
-  font-family: "Indie Flower", cursive;
-  margin: 20px;
-  color: #ffae9d;
-  text-shadow: 2px 2px 3px #dbd9db;
-}
-
 .header {
   width: 100%;
   background-color: #ffede9;
@@ -172,11 +165,17 @@ p, span {
   justify-content: center;
   gap: 10px;
 }
-.home__column img {
+.home__photo {
   width: 100%;
   max-width: 300px;
   border-radius: 50%;
   box-shadow: 3px 3px 5px #dbd9db;
+}
+.home__title {
+  font-family: "Indie Flower", cursive;
+  margin: 20px;
+  color: #ffae9d;
+  text-shadow: 2px 2px 3px #dbd9db;
 }
 
 .insta__icon {
@@ -188,12 +187,11 @@ p, span {
 }
 
 @media screen and (min-width: 640px) {
-  .title__home {
-    font-size: 40px;
-  }
-
-  .home__column img {
+  .home__photo {
     max-width: 500px;
+  }
+  .home__title {
+    font-size: 40px;
   }
 }
 @media screen and (min-width: 760px) {
@@ -203,7 +201,7 @@ p, span {
   }
 }
 @media screen and (min-width: 960px) {
-  .title__home {
+  .home__title {
     font-size: 46px;
   }
 }
