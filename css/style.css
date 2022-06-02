@@ -170,6 +170,7 @@ p, span {
   max-width: 300px;
   border-radius: 50%;
   box-shadow: 3px 3px 5px #dbd9db;
+  align-self: center;
 }
 .home__title {
   font-family: "Indie Flower", cursive;
